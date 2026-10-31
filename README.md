@@ -59,7 +59,7 @@ Netlify puede utilizar la versión de Node.js declarada en `.nvmrc`. Antes del d
 
 Repositorio: <https://github.com/Alexoaab/entre-lineas>.
 
-Sitio en Netlify: pendiente de publicación.
+Sitio en Netlify: <https://entre-lineas-literario.netlify.app/>.
 
 ## Accesibilidad y recursos
 

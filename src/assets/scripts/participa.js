@@ -77,7 +77,8 @@ works.forEach((work) => {
 // Envío real solo después de que Netlify haya procesado el formulario.
 const form = document.querySelector("[data-contact-form]");
 const formStatus = document.querySelector("[data-form-status]");
-const submitButton = form.querySelector("[type='submit']");
+// El minificador puede omitir type="submit" porque es el valor predeterminado.
+const submitButton = form.querySelector(".contact-panel__submit");
 const messageField = form.elements.namedItem("mensaje");
 const messageError = document.querySelector("#mensaje-error");
 messageField.addEventListener("invalid", () => {
