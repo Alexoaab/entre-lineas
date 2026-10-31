@@ -1,0 +1,16 @@
+// Tipografías.
+$font-family-sans-serif: system-ui, -apple-system, blinkmacsystemfont, "Segoe UI", sans-serif;
+$font-family-serif: georgia, "Times New Roman", serif;
+
+// Colores y forma de los componentes.
+$brand-primary: #7a284b;
+$brand-radius: 0.75rem;
+$color-ink: #29222a;
+$color-paper: #fbf7ef;
+$color-surface: #ffffff;
+$color-border: #e2d6dd;
+
+// Medidas y puntos de cambio del diseño.
+$font-size-base: 16px;
+$breakpoint-tablet: 48rem;
+$breakpoint-desktop: 64rem;

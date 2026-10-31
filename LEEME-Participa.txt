@@ -1,0 +1,6 @@
+ENTRE LÍNEAS · PÁGINA PARTICIPA
+La página forma parte del proyecto completo de la PEC2. Las instrucciones de instalación y publicación están en README.md.
+Incluye formulario, galería, juego literario, vídeo con subtítulos y transcripción, mapa y créditos.
+El vídeo de los tres consejos ya está integrado. Voz: Alejandro Ramón Albaladejo Beltrán.
+El formulario no envía consultas desde el servidor local. En Netlify debe activarse la detección de formularios y comprobarse la recepción tras el despliegue.
+El vídeo técnico de presentación de la PEC es una entrega diferente del vídeo incluido en la web.

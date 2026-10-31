@@ -1,0 +1,105 @@
+@use "../variables" as v;
+@use "../functions" as f;
+
+$column-gap: f.to-rem(32px);
+
+@layer pages {
+  .speakers {
+    padding-block: f.to-rem(64px);
+
+    &__title {
+      margin: 0 0 f.to-rem(40px);
+      font-family: v.$font-family-serif;
+      font-size: clamp(2.25rem, 5vw, 3.5rem);
+      color: v.$brand-primary;
+      text-align: center;
+    }
+
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: f.to-rem(48px) $column-gap;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    &__item {
+      flex: 0 0 100%;
+      min-width: 0;
+      container-type: inline-size;
+      container-name: speaker;
+    }
+
+    &__note {
+      margin: f.to-rem(48px) 0 0;
+      font-size: f.to-rem(14px);
+      line-height: 1.6;
+      text-align: left;
+    }
+  }
+
+  .speaker-card {
+    height: 100%;
+    color: v.$color-ink;
+    text-align: center;
+    background-color: transparent;
+    border: 0;
+
+    &__image {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 7 / 5;
+      object-fit: cover;
+      object-position: center 35%;
+      border-radius: v.$brand-radius;
+    }
+
+    &__body {
+      padding: f.to-rem(20px) f.to-rem(4px) 0;
+    }
+
+    &__name {
+      margin: 0 0 f.to-rem(12px);
+      font-family: v.$font-family-serif;
+      font-size: f.to-rem(24px);
+      line-height: 1.25;
+      color: v.$brand-primary;
+    }
+
+    &__description {
+      margin: 0;
+      font-size: f.to-rem(16px);
+      line-height: 1.65;
+    }
+  }
+
+  // La retícula depende del ancho de la pantalla y utiliza Flexbox.
+  @media (min-width: v.$breakpoint-tablet) {
+    .speakers__item {
+      flex-basis: calc((100% - #{$column-gap}) / 2);
+    }
+  }
+
+  @media (min-width: v.$breakpoint-desktop) {
+    .speakers__item {
+      flex-basis: calc((100% - 2 * #{$column-gap}) / 3);
+    }
+  }
+
+  // El contenido se ajusta al ancho de cada tarjeta, no al de la pantalla.
+  @container speaker (min-width: 22rem) {
+    .speaker-card__body {
+      padding: f.to-rem(24px) f.to-rem(16px) 0;
+    }
+
+    .speaker-card__name {
+      font-size: f.to-rem(28px);
+    }
+
+    .speaker-card__description {
+      font-size: f.to-rem(17px);
+    }
+  }
+}

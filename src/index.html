@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+    >
+
+    <meta
+      name="description"
+      content="Entre líneas: jornadas y concurso literario en Castellón de la Plana. Charlas, talleres y cursos de escritura."
+    >
+
+    <title>Entre líneas | Jornadas y concurso literario</title>
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon.png">
+    <link rel="icon" type="image/svg+xml" href="./assets/images/favicon.svg">
+    <link rel="stylesheet" href="./assets/styles/main.scss">
+  </head>
+
+  <body class="page" data-page="inicio">
+    <a class="skip-link" href="#contenido">
+      Saltar al contenido
+    </a>
+
+    <include src="./views/header.html"></include>
+
+    <main class="page__main" id="contenido" tabindex="-1">
+      <section
+        class="poster container"
+        aria-labelledby="titulo-pagina"
+      >
+        <div class="poster__layout">
+          <p class="poster__kicker">
+            Jornadas y concurso literario
+          </p>
+
+          <h1 class="poster__title" id="titulo-pagina">
+            Entre <span class="poster__accent">líneas</span>
+          </h1>
+
+          <div class="poster__visual" aria-hidden="true">
+            <svg
+              class="poster__image"
+              viewBox="0 0 300 260"
+              focusable="false"
+            >
+              <circle
+                cx="150"
+                cy="123"
+                r="105"
+                fill="currentColor"
+                opacity="0.08"
+              />
+
+              <g
+                fill="none"
+                stroke="currentColor"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M150 94C116 70 77 68 35 77V202C77 193 116 195 150 219C184 195 223 193 265 202V77C223 68 184 70 150 94Z"
+                />
+
+                <path
+                  d="M150 94V219M48 87V185C87 180 118 188 140 201M252 87V185C213 180 182 188 160 201"
+                />
+
+                <path
+                  d="M65 106C87 105 110 110 129 119M65 129C87 128 110 133 129 142M65 152C84 151 101 154 117 160"
+                />
+
+                <path
+                  d="M171 119C190 110 213 105 235 106M171 142C190 133 213 128 235 129M183 160C199 154 216 151 235 152"
+                />
+
+                <path
+                  d="M150 38V53M116 44L122 58M184 44L178 58"
+                />
+              </g>
+            </svg>
+          </div>
+
+          <p class="poster__description">
+            Un encuentro para descubrir historias y empezar la tuya.
+            Comparte lecturas, participa en charlas y desarrolla tus ideas
+            en talleres y cursos de escritura.
+          </p>
+
+          <div class="poster__actions">
+            <div class="poster__links">
+              <a class="btn btn-primary" href="./jornadas.html">
+                Conoce las jornadas
+              </a>
+
+              <a
+                class="btn btn-outline-primary"
+                href="./participa.html"
+              >
+                Participa en el concurso
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <include src="./views/footer.html"></include>
+
+    <script
+      type="module"
+      src="./assets/scripts/main.js"
+    ></script>
+  </body>
+</html>

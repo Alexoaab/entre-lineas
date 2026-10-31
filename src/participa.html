@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Participa en Entre líneas: consultas, inspiración, un juego de autores y libros y la ubicación de las jornadas en Castellón.">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon.png">
+    <link rel="icon" type="image/svg+xml" href="./assets/images/favicon.svg">
+    <link rel="stylesheet" href="./assets/styles/main.scss">
+    <title>Participa | Entre líneas</title>
+  </head>
+  <body class="page" data-page="participa">
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+    <include src="./views/header.html"></include>
+    <main class="page__main participate" id="contenido" tabindex="-1">
+      <header class="participate__intro container">
+        <p class="participate__eyebrow">Tu próxima historia empieza aquí</p>
+        <h1 class="participate__title">Participa en Entre líneas</h1>
+        <p>Encuentra inspiración, descubre nuevas lecturas y comparte tus preguntas sobre las jornadas y el concurso literario.</p>
+        <nav class="participate__links" aria-label="Secciones de Participa">
+          <a href="#consultas">Consultas</a>
+          <a href="#galeria">Galería</a>
+          <a href="#juego">Juego literario</a>
+          <a href="#video">Vídeo</a>
+          <a href="#ubicacion">Cómo llegar</a>
+        </nav>
+      </header>
+      <div class="container">
+        <section class="participate__section" id="consultas" aria-labelledby="consultas-titulo">
+          <p class="participate__eyebrow">Hablemos</p>
+          <h2 id="consultas-titulo">¿Qué te gustaría saber?</h2>
+          <p>Escríbenos sobre las jornadas, los talleres de escritura o el concurso.</p>
+          <div class="contact-panel">
+            <form class="contact-panel__form" name="consultas-entre-lineas" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" aria-describedby="form-ayuda" data-contact-form>
+              <input type="hidden" name="form-name" value="consultas-entre-lineas">
+              <p hidden><label>No rellenes este campo: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+              <p id="form-ayuda" class="participate__note">Todos los campos son obligatorios.</p>
+              <div class="contact-panel__fields">
+                <div>
+                  <label class="form-label" for="nombre">Nombre</label>
+                  <input class="form-control" id="nombre" name="nombre" autocomplete="given-name" maxlength="80" required>
+                </div>
+                <div>
+                  <label class="form-label" for="correo">Correo electrónico</label>
+                  <input class="form-control" id="correo" name="email" type="email" autocomplete="email" maxlength="150" required>
+                </div>
+                <div class="contact-panel__wide">
+                  <label class="form-label" for="interes">Tema de la consulta</label>
+                  <select class="form-select" id="interes" name="interes" required>
+                    <option value="">Selecciona una opción</option>
+                    <option value="concurso-literario">Concurso literario</option>
+                    <option value="talleres-escritura">Talleres de escritura</option>
+                    <option value="jornadas-literarias">Jornadas literarias</option>
+                  </select>
+                </div>
+                <div class="contact-panel__wide">
+                  <label class="form-label" for="mensaje">Tu mensaje</label>
+                  <textarea class="form-control" id="mensaje" name="mensaje" rows="5" minlength="10" maxlength="1500" aria-describedby="mensaje-ayuda mensaje-error" required></textarea>
+                  <p id="mensaje-ayuda" class="form-text">Entre 10 y 1500 caracteres.</p>
+                  <p class="contact-panel__error" id="mensaje-error" hidden></p>
+                </div>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="confirmacion" name="confirmacion" value="si" required>
+                <label class="form-check-label" for="confirmacion">He leído los <a href="#creditos" data-open-credits>créditos del proyecto</a> y acepto enviar mi consulta al responsable.</label>
+              </div>
+              <button class="btn btn-primary contact-panel__submit" type="submit">Enviar consulta</button>
+              <p class="contact-panel__status" role="status" aria-live="polite" aria-atomic="true" data-form-status></p>
+            </form>
+          </div>
+        </section>
+
+        <section class="participate__section" id="galeria" aria-labelledby="galeria-titulo">
+          <p class="participate__eyebrow">Encuentra inspiración</p>
+          <h2 id="galeria-titulo">Las historias también empiezan con una imagen</h2>
+          <p>Abre una fotografía y recorre la galería para encontrar tu próxima idea.</p>
+          <div class="reading-gallery">
+            <figure class="reading-gallery__item">
+              <a href="https://commons.wikimedia.org/wiki/File:Library_Books_Bookshelves_(Unsplash).jpg" target="_blank" rel="noopener noreferrer" data-gallery aria-label="Ampliar Entre libros">
+                <img src="./assets/images/jornadas/biblioteca.jpg" alt="Estanterías de una biblioteca llenas de libros." width="1280" height="854" loading="lazy" decoding="async">
+              </a>
+              <figcaption><strong>Entre libros</strong><span>Davide Cantelli · CC0</span></figcaption>
+            </figure>
+            <figure class="reading-gallery__item">
+              <a href="https://commons.wikimedia.org/wiki/File:Journaling_over_coffee_(Unsplash).jpg" target="_blank" rel="noopener noreferrer" data-gallery aria-label="Ampliar La primera frase">
+                <img src="./assets/images/jornadas/escritura.jpg" alt="Una persona escribe en un cuaderno junto a un café y un ordenador." width="1280" height="853" loading="lazy" decoding="async">
+              </a>
+              <figcaption><strong>La primera frase</strong><span>Thought Catalog · CC0</span></figcaption>
+            </figure>
+            <figure class="reading-gallery__item">
+              <a href="https://commons.wikimedia.org/wiki/File:Man_reading_book_on_ottoman_(Unsplash).jpg" target="_blank" rel="noopener noreferrer" data-gallery aria-label="Ampliar Leer en compañía">
+                <img src="./assets/images/jornadas/lectura.jpg" alt="Dos personas comparten la lectura de un libro al aire libre." width="1280" height="854" loading="lazy" decoding="async">
+              </a>
+              <figcaption><strong>Leer en compañía</strong><span>Ben White · CC0</span></figcaption>
+            </figure>
+            <figure class="reading-gallery__item">
+              <a href="https://commons.wikimedia.org/wiki/File:Discussions_at_a_long_table_(Unsplash).jpg" target="_blank" rel="noopener noreferrer" data-gallery aria-label="Ampliar Ideas compartidas">
+                <img src="./assets/images/jornadas/conversacion.jpg" alt="Varias personas conversan sentadas junto a un gran ventanal." width="1280" height="845" loading="lazy" decoding="async">
+              </a>
+              <figcaption><strong>Ideas compartidas</strong><span>Samuel Zeller · CC0</span></figcaption>
+            </figure>
+          </div>
+          <dialog class="gallery-dialog" aria-labelledby="galeria-dialogo-titulo" data-gallery-dialog>
+            <div class="gallery-dialog__header">
+              <h3 id="galeria-dialogo-titulo">Galería de inspiración</h3>
+              <form method="dialog"><button class="btn btn-outline-primary" autofocus>Cerrar</button></form>
+            </div>
+            <img class="gallery-dialog__image" src="./assets/images/jornadas/biblioteca.jpg" alt="" data-gallery-image>
+            <p class="gallery-dialog__caption" aria-live="polite" aria-atomic="true" data-gallery-caption></p>
+            <div class="gallery-dialog__controls">
+              <button class="btn btn-outline-primary" type="button" data-gallery-prev>Anterior</button>
+              <button class="btn btn-primary" type="button" data-gallery-next>Siguiente</button>
+            </div>
+          </dialog>
+        </section>
+
+        <section class="participate__section" id="juego" aria-labelledby="juego-titulo">
+          <p class="participate__eyebrow">Encuentra la relación</p>
+          <h2 id="juego-titulo">Entre autores y libros</h2>
+          <p id="juego-instrucciones">Observa al autor y las seis obras. Selecciona un libro y pulsa «Confirmar respuesta». Puedes cambiar tu elección antes de confirmar. Cuando aciertes, continúa con el siguiente autor.</p>
+          <noscript><p>Activa JavaScript para jugar. El formulario, las fotografías y la ubicación siguen disponibles.</p></noscript>
+          <div class="literary-game" aria-describedby="juego-instrucciones" data-game hidden>
+            <div class="literary-game__toolbar">
+              <p class="literary-game__score" data-game-score>0 de 6 parejas · 0 intentos · 0 pistas</p>
+              <button class="btn btn-outline-primary" type="button" data-game-reset>Nueva partida</button>
+            </div>
+            <div class="literary-game__layout">
+              <section class="literary-game__author" aria-labelledby="autor-titulo">
+                <p class="participate__eyebrow" data-game-round>Autor 1 de 6</p>
+                <h3 id="autor-titulo" tabindex="-1" data-author-name>Arturo Pérez-Reverte</h3>
+                <img class="literary-game__portrait" src="./assets/images/participa/autores/perez-reverte.jpg" alt="Retrato de Arturo Pérez-Reverte" width="400" height="500" data-author-photo>
+                <button class="btn btn-outline-primary" type="button" data-game-hint>Pedir una pista</button>
+                <p class="literary-game__hint" role="status" aria-live="polite" data-game-hint-text></p>
+              </section>
+              <div class="literary-game__answers">
+                <fieldset class="literary-game__fieldset" data-game-options>
+                  <legend>¿Cuál de estas obras escribió?</legend>
+                  <div class="literary-game__books" data-books></div>
+                </fieldset>
+                <p class="literary-game__selection" data-game-selection>Ninguna obra seleccionada.</p>
+                <div class="literary-game__actions">
+                  <button class="btn btn-primary" type="button" data-game-confirm disabled>Confirmar respuesta</button>
+                  <button class="btn btn-primary" type="button" data-game-next hidden>Siguiente autor</button>
+                </div>
+                <p class="literary-game__status" role="status" aria-live="polite" aria-atomic="true" tabindex="-1" data-game-status>Elige una obra y confirma tu respuesta.</p>
+              </div>
+            </div>
+            <section class="literary-game__discoveries" aria-labelledby="descubrimientos-titulo" data-discoveries hidden>
+              <h3 id="descubrimientos-titulo">Lecturas que has descubierto</h3>
+              <ul data-discovery-list></ul>
+            </section>
+          </div>
+        </section>
+
+        <section class="participate__section" id="video" aria-labelledby="video-titulo">
+          <p class="participate__eyebrow">Del papel a la voz</p>
+          <h2 id="video-titulo">Tres consejos para empezar un relato</h2>
+          <p>Una idea cercana, un primer borrador y una revisión en voz alta: tres pasos para empezar tu historia.</p>
+          <figure class="story-video">
+            <video class="story-video__player" controls playsinline preload="none" width="1920" height="1080" poster="./assets/images/participa/video-portada.jpg" aria-labelledby="video-titulo" aria-describedby="video-ayuda">
+              <source src="./assets/videos/entre-lineas-tres-consejos.mp4" type="video/mp4">
+              <track src="./assets/videos/entre-lineas-tres-consejos.vtt" kind="captions" srclang="es" label="Español" default>
+              Tu navegador no permite reproducir este vídeo. Puedes leer la transcripción que aparece debajo.
+            </video>
+            <figcaption class="story-video__caption">Voz: Alejandro Ramón Albaladejo Beltrán · Duración: 2 min 30 s.</figcaption>
+          </figure>
+          <p class="participate__note" id="video-ayuda">Puedes activar o desactivar los subtítulos desde los controles del reproductor.</p>
+          <details class="story-video__transcript">
+            <summary>Leer la transcripción del vídeo</summary>
+            <h3>Introducción</h3>
+            <p>Hola, en este vídeo de Entre líneas voy a compartir tres consejos para empezar un relato. A veces tenemos ganas de escribir, pero no sabemos qué contar ni por dónde comenzar. Estos consejos nos ayudarán a encontrar una idea, escribir un primer borrador y revisar el resultado.</p>
+            <h3>Una idea cercana</h3>
+            <p>El primer consejo es buscar una idea cercana. Puedes fijarte en algo cotidiano y preguntarte qué podría pasar. Por ejemplo, imagina una conversación que se interrumpe de repente. ¿Qué ha oído uno de los personajes? ¿Por qué decide marcharse? Anota ese detalle y elige una de estas preguntas. A partir de ella puedes imaginar una situación y empezar a construir tu historia.</p>
+            <h3>Un primer borrador</h3>
+            <p>El segundo consejo es escribir un primer borrador. Empieza con una escena breve y deja la corrección para después. Para darle dirección, piensa qué desea tu personaje y qué se lo impide. En nuestro ejemplo, quizá quiere terminar la conversación, pero la otra persona se marcha. Ya tenemos un objetivo y un obstáculo. Escribe lo que ocurre, aunque alguna frase todavía no te convenza. Después podrás mejorarla.</p>
+            <h3>La revisión en voz alta</h3>
+            <p>El tercer consejo es leer el borrador en voz alta. Escucha el ritmo y comprueba si se entiende lo que ocurre. Si una frase resulta confusa, prueba dividirla o a cambiar alguna palabra. También puedes eliminar una repetición que no aporte nada. Cada frase puede servir para mostrar una acción, conocer al personaje o crear ambiente. Revisa con calma y conserva lo que ayude a contar tu historia.</p>
+            <p>Ahora te toca a ti. Elige una idea y empieza a escribir. Gracias por acompañarme en Entre líneas.</p>
+          </details>
+        </section>
+
+        <section class="participate__section" id="ubicacion" aria-labelledby="ubicacion-titulo">
+          <p class="participate__eyebrow">Nos encontramos en Castellón</p>
+          <h2 id="ubicacion-titulo">Dónde estamos y cómo llegar</h2>
+          <div class="venue">
+            <div class="venue__information">
+              <h3>MENADOR espai cultural</h3>
+              <address>Plaça de l’Hort dels Corders, 4<br>12001 · Castellón de la Plana</address>
+              <p>Del <time datetime="2027-05-21">21</time> al <time datetime="2027-05-23">23 de mayo de 2027</time>.</p>
+              <a class="btn btn-primary" href="https://www.google.com/maps/dir/?api=1&amp;destination=MENADOR%20espai%20cultural%2C%20Castellon%20de%20la%20Plana" target="_blank" rel="noopener noreferrer">Cómo llegar</a>
+            </div>
+            <iframe class="venue__map" title="Ubicación de MENADOR espai cultural en Castellón de la Plana" src="https://www.google.com/maps?q=MENADOR%20espai%20cultural%2C%20Placa%20de%20l%27Hort%20dels%20Corders%204%2C%20Castellon&amp;output=embed" width="800" height="450" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+          </div>
+        </section>
+
+        <details class="participate__credits" id="creditos">
+          <summary>Créditos del proyecto</summary>
+          <h2>Sobre Entre líneas</h2>
+          <ul>
+            <li><strong>Proyecto y formulario.</strong> Las jornadas son ficticias y forman parte de un proyecto académico. El formulario permite enviar una consulta de prueba al responsable del proyecto y no reserva plazas.</li>
+            <li><strong>Ponentes.</strong> Los nombres, las biografías y los retratos de la página de ponentes son ficticios. Las imágenes se han generado con ChatGPT/OpenAI y se utilizan como ilustraciones.</li>
+            <li><strong>Sede.</strong> MENADOR espai cultural es la sede propuesta para este proyecto académico.</li>
+            <li><strong>Juego literario.</strong> Los autores y los libros del juego son reales. Las tarjetas de libros son diseños originales, no reproducciones de cubiertas comerciales. La presencia de los autores no implica su participación en las jornadas.</li>
+            <li><strong>Galería.</strong> Las fotografías son imágenes ilustrativas de lectura, escritura y conversación; no muestran el evento ni su sede.</li>
+          </ul>
+          <h3>Icono del favicon</h3>
+          <p>Se utiliza el icono <a href="https://fontawesome.com/icons/book-open?f=classic&amp;s=solid" target="_blank" rel="noopener noreferrer">book-open de Font Awesome Free</a>, creado por Fonticons, Inc., bajo licencia <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a>. Se han adaptado el color, el tamaño y el margen para utilizarlo como favicon.</p>
+          <h3>Textos citados</h3>
+          <p>La página de las jornadas incorpora dos fragmentos de <cite>Don Quijote de la Mancha</cite>, de Miguel de Cervantes: segunda parte, capítulos LVIII y XXV. La obra original está en dominio público. Las fuentes enlazadas permiten consultar los pasajes completos.</p>
+          <p>En la cita breve se actualiza la grafía antigua «vee» a «ve». El signo […] indica que la cita independiente es un fragmento de un pasaje más extenso.</p>
+          <ul>
+            <li><a href="https://www.cervantesvirtual.com/obra-visor/el-ingenioso-hidalgo-don-quijote-de-la-mancha--13/html/ff0dcf4a-82b1-11df-acc7-002185ce6064_20.html" target="_blank" rel="noopener noreferrer">Capítulo LVIII · Biblioteca Virtual Miguel de Cervantes</a></li>
+            <li><a href="https://www.cervantesvirtual.com/obra-visor/el-ingenioso-hidalgo-don-quijote-de-la-mancha--13/html/ff0dcf4a-82b1-11df-acc7-002185ce6064_17.html" target="_blank" rel="noopener noreferrer">Capítulo XXV · Biblioteca Virtual Miguel de Cervantes</a></li>
+          </ul>
+          <h3>Fotografías y licencias</h3>
+          <p>Los nueve retratos de ponentes se han generado con IA para este proyecto. Se conservan sus originales y las instrucciones de generación. No se les ha asignado una licencia abierta específica ni se presentan como fotografías de Wikimedia Commons.</p>
+          <p>Los originales y sus licencias se incluyen en los recursos del proyecto. Las fotografías se encuadran visualmente mediante CSS.</p>
+          <ul data-photo-credits></ul>
+          <p>Galería: Davide Cantelli, Thought Catalog, Ben White y Samuel Zeller. Fotografías disponibles en Wikimedia Commons bajo CC0.</p>
+          <ul>
+            <li><a href="https://commons.wikimedia.org/wiki/File:Library_Books_Bookshelves_(Unsplash).jpg" target="_blank" rel="noopener noreferrer">Biblioteca · Fuente</a></li>
+            <li><a href="https://commons.wikimedia.org/wiki/File:Journaling_over_coffee_(Unsplash).jpg" target="_blank" rel="noopener noreferrer">Escritura · Fuente</a></li>
+            <li><a href="https://commons.wikimedia.org/wiki/File:Man_reading_book_on_ottoman_(Unsplash).jpg" target="_blank" rel="noopener noreferrer">Lectura · Fuente</a></li>
+            <li><a href="https://commons.wikimedia.org/wiki/File:Discussions_at_a_long_table_(Unsplash).jpg" target="_blank" rel="noopener noreferrer">Conversación · Fuente</a></li>
+          </ul>
+          <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener noreferrer">Condiciones de CC0</a>
+          <h3>Vídeo y narración</h3>
+          <p>El vídeo <cite>Tres consejos para empezar un relato</cite> incluye una narración grabada por Alejandro Ramón Albaladejo Beltrán. El guion, las diapositivas y el montaje se han elaborado con apoyo de ChatGPT. Se utilizan las cuatro fotografías de la galería, con los autores, las fuentes y la licencia CC0 indicados arriba, recortadas para adaptarlas a las diapositivas.</p>
+        </details>
+      </div>
+    </main>
+    <include src="./views/footer.html"></include>
+    <script type="module" src="./assets/scripts/main.js"></script>
+    <script type="module" src="./assets/scripts/participa.js"></script>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+@use "../variables" as v;
+@use "../functions" as f;
+
+@layer pages {
+  .page-intro {
+    padding-block: f.to-rem(64px);
+
+    &__title {
+      margin-bottom: f.to-rem(24px);
+      font-family: v.$font-family-serif;
+      color: v.$brand-primary;
+    }
+
+    &__description {
+      max-width: 42rem;
+      font-size: f.to-rem(18px);
+      line-height: 1.7;
+    }
+  }
+}

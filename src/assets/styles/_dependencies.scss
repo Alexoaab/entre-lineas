@@ -1,0 +1,22 @@
+@use "sass:meta";
+@use "variables" as v;
+@use "@fortawesome/fontawesome-free/scss/variables" as fa with (
+  $font-path: "npm:@fortawesome/fontawesome-free/webfonts"
+);
+
+@layer vendor {
+  @include meta.load-css(
+    "bootstrap/scss/bootstrap",
+    $with: (
+      "primary": v.$brand-primary,
+      "border-radius": v.$brand-radius,
+      "font-family-sans-serif": v.$font-family-sans-serif,
+      "body-color": v.$color-ink,
+      "body-bg": v.$color-paper,
+      "enable-important-utilities": false
+    )
+  );
+  @include meta.load-css("@fortawesome/fontawesome-free/scss/fontawesome");
+  @include meta.load-css("@fortawesome/fontawesome-free/scss/solid");
+  @include meta.load-css("@fortawesome/fontawesome-free/scss/brands");
+}

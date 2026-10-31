@@ -1,0 +1,7 @@
+@use "variables" as v;
+
+@layer components {
+  .site-footer {
+    background-color: v.$color-paper;
+  }
+}

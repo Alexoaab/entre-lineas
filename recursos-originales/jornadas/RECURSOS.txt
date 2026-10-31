@@ -1,0 +1,17 @@
+FOTOGRAFÍAS DEL ARTÍCULO LAS JORNADAS
+
+Se han descargado cuatro fotografías de Wikimedia Commons cuyas fichas indican CC0. La tabla recursos-y-licencias.csv registra el título original, el autor, la fuente, la licencia y la fecha de consulta. Se conservan los archivos originales sin modificar, además de las versiones de 1280 px descargadas para la web.
+
+biblioteca.jpg se utiliza como fondo de la cabecera. escritura.jpg, lectura.jpg y conversacion.jpg ilustran los apartados del artículo. Todas son imágenes de ambientación: no documentan las jornadas ficticias de Entre líneas ni representan MENADOR.
+
+El encuadre de las imágenes y la superposición oscura sobre la cabecera se aplican mediante CSS. Las fotografías no han sido editadas.
+
+CITAS LITERARIAS DEL ARTÍCULO
+El artículo incorpora dos fragmentos de Don Quijote de la Mancha, de Miguel de Cervantes, segunda parte (1615): capítulos LVIII y XXV. La obra original está en dominio público; no se reproducen las notas ni los comentarios de las ediciones consultadas. La selección de los fragmentos se identifica con su autor, título, capítulo y enlace a la fuente. El signo […] marca la continuación omitida. En la cita breve se moderniza la grafía «vee» a «ve».
+
+Fuentes:
+https://www.cervantesvirtual.com/obra-visor/el-ingenioso-hidalgo-don-quijote-de-la-mancha--13/html/ff0dcf4a-82b1-11df-acc7-002185ce6064_20.html
+https://www.cervantesvirtual.com/obra-visor/el-ingenioso-hidalgo-don-quijote-de-la-mancha--13/html/ff0dcf4a-82b1-11df-acc7-002185ce6064_17.html
+
+Los demás párrafos del artículo se han redactado para el supuesto académico de Entre líneas.
+

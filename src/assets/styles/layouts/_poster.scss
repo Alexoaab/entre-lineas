@@ -1,0 +1,245 @@
+@use "../variables" as v;
+@use "../functions" as f;
+
+// Fuera de las capas: los navegadores sin Grid pueden no admitir @layer.
+@supports not (display: grid) {
+  .poster {
+    max-width: f.to-rem(1140px);
+    margin-inline: auto;
+    padding: f.to-rem(24px);
+    color: v.$color-ink;
+    background-color: v.$color-paper;
+  }
+
+  .poster__layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .poster__layout > * {
+    max-width: 100%;
+    margin: 0 0 f.to-rem(24px);
+  }
+
+  .poster__title {
+    font-family: v.$font-family-serif;
+    font-size: f.to-rem(48px);
+    line-height: 1.1;
+  }
+
+  .poster__visual {
+    width: 100%;
+    padding: f.to-rem(24px);
+    color: v.$color-paper;
+    background-color: v.$brand-primary;
+    border-radius: v.$brand-radius;
+    box-sizing: border-box;
+  }
+
+  .poster__image {
+    width: 80%;
+    max-width: f.to-rem(384px);
+    height: auto;
+  }
+
+  .poster__description {
+    font-size: f.to-rem(18px);
+    line-height: 1.7;
+  }
+
+  .poster__links {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .poster__links a {
+    margin: f.to-rem(6px) 0;
+    padding: f.to-rem(12px);
+    color: v.$brand-primary;
+    border: 1px solid v.$brand-primary;
+    border-radius: v.$brand-radius;
+  }
+}
+
+@layer pages {
+  .poster {
+    padding-block: f.to-rem(32px) f.to-rem(64px);
+
+    &__layout {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: f.to-rem(24px);
+      text-align: center;
+    }
+
+    &__kicker {
+      width: 100%;
+      margin: 0;
+      padding-block: f.to-rem(12px);
+      font-size: f.to-rem(12px);
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      color: v.$brand-primary;
+      text-transform: uppercase;
+      border-bottom: f.to-rem(1px) solid v.$color-border;
+    }
+
+    &__title {
+      margin: 0;
+      font-family: v.$font-family-serif;
+      font-size: clamp(2.75rem, 7vw, 6.5rem);
+      line-height: 1.05;
+      background-color: v.$color-paper;
+    }
+
+    &__accent {
+      font-style: italic;
+      color: v.$brand-primary;
+    }
+
+    &__visual {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      min-height: f.to-rem(280px);
+      padding: f.to-rem(24px);
+      color: v.$color-paper;
+      background-color: v.$brand-primary;
+      border-radius: v.$brand-radius;
+    }
+
+    &__image {
+      display: block;
+      width: 80%;
+      max-width: f.to-rem(384px);
+      height: auto;
+    }
+
+    &__description {
+      margin: 0;
+      font-size: f.to-rem(18px);
+      line-height: 1.7;
+    }
+
+    &__actions {
+      width: 100%;
+      container-type: inline-size;
+      container-name: poster-actions;
+    }
+
+    &__links {
+      display: flex;
+      flex-direction: column;
+      gap: f.to-rem(12px);
+    }
+  }
+
+  // La distribución anterior funciona como alternativa sin CSS Grid.
+  @supports (display: grid) {
+    .poster__layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      justify-items: center;
+    }
+
+    // Tablet: una franja superior y dos columnas de contenido.
+    @media (min-width: v.$breakpoint-tablet) {
+      .poster__layout {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-rows: auto auto minmax(9rem, auto) auto;
+        place-items: start stretch;
+        gap: 0;
+        text-align: left;
+      }
+
+      .poster__kicker {
+        grid-column: 1 / -1;
+        grid-row: 1;
+        margin-bottom: f.to-rem(24px);
+      }
+
+      .poster__title {
+        grid-column: 1 / 3;
+        grid-row: 2;
+        padding: f.to-rem(24px) 0 f.to-rem(32px);
+      }
+
+      .poster__visual {
+        grid-column: 1;
+        grid-row: 3 / 5;
+        align-self: stretch;
+        min-height: f.to-rem(384px);
+      }
+
+      .poster__description {
+        grid-column: 2;
+        grid-row: 3;
+        margin-inline: f.to-rem(24px);
+        padding-top: f.to-rem(20px);
+        border-top: f.to-rem(4px) solid v.$brand-primary;
+      }
+
+      .poster__actions {
+        grid-column: 2;
+        grid-row: 4;
+        align-self: end;
+        padding: f.to-rem(24px);
+      }
+    }
+
+    // Escritorio: cinco columnas y un título superpuesto a la ilustración.
+    @media (min-width: v.$breakpoint-desktop) {
+      .poster__layout {
+        grid-template-columns:
+          minmax(0, 0.8fr)
+          minmax(0, 1fr)
+          minmax(0, 1fr)
+          minmax(1rem, 0.25fr)
+          minmax(0, 1.75fr);
+      }
+
+      .poster__visual {
+        grid-column: 1 / 4;
+        grid-row: 2 / 5;
+        justify-content: flex-start;
+        min-height: f.to-rem(512px);
+        padding: f.to-rem(40px);
+      }
+
+      .poster__image {
+        width: 66%;
+      }
+
+      .poster__title {
+        z-index: 1;
+        grid-column: 3 / 6;
+        grid-row: 2;
+        padding: f.to-rem(24px);
+      }
+
+      .poster__description {
+        grid-column: 5;
+        grid-row: 3;
+        margin: f.to-rem(24px) 0;
+      }
+
+      .poster__actions {
+        grid-column: 5;
+        grid-row: 4;
+        align-self: end;
+        padding: f.to-rem(24px) 0 0;
+      }
+    }
+  }
+
+  // La disposición de los enlaces depende del ancho de su propia zona.
+  @container poster-actions (min-width: 28rem) {
+    .poster__links {
+      flex-flow: row wrap;
+    }
+  }
+}

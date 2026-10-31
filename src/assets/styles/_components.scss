@@ -1,0 +1,204 @@
+@use "variables" as v;
+@use "functions" as f;
+
+@layer components {
+  .nav-link[aria-current="page"] {
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 0.25em;
+  }
+
+  .skip-link {
+    position: fixed;
+    top: f.to-rem(16px);
+    left: 50%;
+    z-index: 1100;
+    width: max-content;
+    max-width: calc(100% - 2rem);
+    padding: f.to-rem(12px) f.to-rem(16px);
+    color: v.$color-surface;
+    background-color: v.$brand-primary;
+    border-radius: v.$brand-radius;
+    transform: translate(-50%, -200%);
+
+    &:focus {
+      transform: translate(-50%, 0);
+    }
+  }
+
+  .site-header {
+    padding-block: f.to-rem(12px);
+    background-color: v.$color-paper;
+  }
+
+  .page:not([data-page="inicio"]) .site-header {
+    border-bottom: 1px solid v.$color-border;
+  }
+
+  .site-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: f.to-rem(10px);
+    max-width: 100%;
+    padding-block: f.to-rem(8px);
+    font-family: v.$font-family-serif;
+    font-size: f.to-rem(24px);
+    font-weight: 700;
+    color: v.$brand-primary;
+    text-decoration: none;
+    white-space: normal;
+
+    &:hover {
+      color: v.$brand-primary;
+      text-decoration: underline;
+      text-underline-offset: 0.2em;
+    }
+  }
+
+  .site-footer {
+    color: v.$color-ink;
+    background-color: v.$color-surface;
+
+    &__contact {
+      padding-block: f.to-rem(48px);
+      text-align: center;
+    }
+
+    &__information {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: f.to-rem(12px) f.to-rem(20px);
+      margin-bottom: f.to-rem(16px);
+      line-height: 1.6;
+    }
+
+    &__venue {
+      display: inline-flex;
+      align-items: center;
+      gap: f.to-rem(12px);
+      max-width: 100%;
+      font-family: v.$font-family-serif;
+      font-size: clamp(1.375rem, 3vw, 2rem);
+      font-weight: 700;
+      color: v.$brand-primary;
+    }
+
+    &__venue-icon {
+      flex: none;
+      font-size: 0.8em;
+    }
+
+    &__date {
+      display: inline-flex;
+      align-items: center;
+      gap: f.to-rem(8px);
+      max-width: 100%;
+      padding: f.to-rem(6px) f.to-rem(12px);
+      font-size: f.to-rem(14px);
+      font-weight: 600;
+      line-height: 1.5;
+      color: v.$brand-primary;
+      background-color: v.$color-paper;
+      border: 1px solid v.$color-border;
+      border-radius: v.$brand-radius;
+    }
+
+    &__location {
+      display: flex;
+      align-items: baseline;
+      justify-content: center;
+      gap: f.to-rem(8px);
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    &__location-icon {
+      flex: none;
+      color: v.$brand-primary;
+    }
+
+    &__bottom {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: f.to-rem(20px);
+      padding-block: f.to-rem(24px);
+      border-top: 1px solid v.$color-border;
+    }
+
+    &__navigation {
+      min-width: 0;
+      max-width: 100%;
+    }
+
+    &__links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: f.to-rem(8px) f.to-rem(24px);
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    &__link {
+      display: inline-block;
+      padding: f.to-rem(10px) f.to-rem(4px);
+      color: v.$color-ink;
+      text-decoration: none;
+
+      &:hover {
+        color: v.$brand-primary;
+        text-decoration: underline;
+        text-underline-offset: 0.25em;
+      }
+    }
+
+    &__socials {
+      display: flex;
+      justify-content: center;
+      gap: f.to-rem(4px);
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    &__social-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: f.to-rem(44px);
+      height: f.to-rem(44px);
+      font-size: f.to-rem(20px);
+      color: v.$brand-primary;
+      text-decoration: none;
+      border-radius: 50%;
+
+      &:hover {
+        color: v.$brand-primary;
+        background-color: v.$color-paper;
+      }
+    }
+  }
+
+  @media (min-width: v.$breakpoint-desktop) {
+    .site-footer__bottom {
+      flex-direction: row;
+    }
+
+    .site-footer__brand {
+      flex: 1;
+    }
+
+    .site-footer__navigation {
+      flex: 2;
+    }
+
+    .site-footer__socials {
+      flex: 1;
+      justify-content: flex-end;
+    }
+  }
+}

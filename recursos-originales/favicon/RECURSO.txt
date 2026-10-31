@@ -1,0 +1,7 @@
+Recurso: book-open, Font Awesome Free 7.3.1.
+Autor: Fonticons, Inc.
+Origen: paquete npm @fortawesome/fontawesome-free, svgs/solid/book-open.svg.
+Página: https://fontawesome.com/icons/book-open?f=classic&s=solid
+Licencia del icono SVG: CC BY 4.0, https://creativecommons.org/licenses/by/4.0/
+Adaptaciones: color #7a284b, margen, escala y conversión a PNG de 32 × 32 píxeles.
+Se conservan el original SVG y la licencia distribuida con el paquete.

@@ -1,0 +1,11 @@
+RETRATOS PROFESIONALES · ENTRE LÍNEAS
+
+Los nueve retratos representan personas ficticias. Se han generado mediante la herramienta integrada de generación de imágenes de ChatGPT/OpenAI, a partir de instrucciones preparadas durante el desarrollo del proyecto, el 30 de octubre de 2026.
+
+Se solicitó una serie uniforme: fondo gris claro neutro, mirada directa a cámara, plano de cabeza y hombros, luz de estudio suave y encuadre horizontal 7:5. Los prompts completos de cada retrato figuran en prompts-y-procedencia.json.
+
+Se conservan los PNG originales sin modificar. Los JPG de uso web son exportaciones de esos mismos originales, sin recortes ni cambios de composición.
+
+Esta serie sustituye a las fotografías de Wikimedia Commons utilizadas inicialmente. La atribución de aquellas fotografías y su indicación CC0 no corresponden a estos nuevos retratos. No se ha aplicado una licencia abierta específica a esta serie generada con IA.
+
+Para la memoria, debe declararse la generación con IA, la herramienta utilizada y el proceso de selección. Los nombres de los archivos identifican los perfiles ficticios del proyecto.

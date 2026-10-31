@@ -1,0 +1,32 @@
+@use "variables" as v;
+@use "functions" as f;
+
+@layer base {
+  html {
+    font-size: 100%;
+  }
+
+  .page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    font-family: v.$font-family-sans-serif;
+    color: v.$color-ink;
+    background-color: v.$color-paper;
+    overflow-wrap: break-word;
+
+    &__main {
+      flex: 1;
+    }
+  }
+
+  .page :where(img, video) {
+    border-radius: v.$brand-radius;
+  }
+
+  :focus-visible {
+    outline: f.to-rem(3px) solid v.$brand-primary;
+    outline-offset: f.to-rem(4px);
+  }
+}

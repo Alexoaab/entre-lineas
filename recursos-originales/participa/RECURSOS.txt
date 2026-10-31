@@ -1,0 +1,16 @@
+RECURSOS DE LA PÁGINA PARTICIPA — ENTRE LÍNEAS
+
+1. Retratos de autores
+Las fotografías proceden de Wikimedia Commons. La tabla recursos-y-licencias.csv identifica el fotógrafo, la fuente, la licencia y los cambios de cada archivo. Se incluyen versiones reducidas para la web; los originales se entregan en PEC2-Participa-Originales.zip. Se mantienen las licencias indicadas para cada fotografía.
+
+2. Tarjetas de libros
+Los seis archivos SVG son diseños originales elaborados con asistencia de IA para este proyecto. No reproducen las cubiertas comerciales. No se les atribuye una licencia MIT o Creative Commons de terceros. El código fuente es el propio archivo SVG.
+
+3. Galería
+Se reutilizan biblioteca.jpg, escritura.jpg, lectura.jpg y conversacion.jpg de la página de las jornadas. Sus fotógrafos son Davide Cantelli, Thought Catalog, Ben White y Samuel Zeller, respectivamente. Las fichas de Wikimedia Commons indican CC0. El ZIP de imágenes web incluye de nuevo las cuatro versiones utilizadas. Conserva también los originales de la entrega anterior de la página de jornadas.
+
+4. Mapa y servicios
+El mapa es una integración de Google Maps; no es una imagen del proyecto con licencia Creative Commons. Se conserva la atribución del proveedor dentro del mapa. El formulario se prepara para Netlify Forms y requiere activar la detección de formularios y desplegarlo en Netlify. El envío real no se ha probado todavía.
+
+5. Vídeo
+Se incorpora el vídeo Tres consejos para empezar un relato, con voz de Alejandro Ramón Albaladejo Beltrán. Se incluyen subtítulos WebVTT y una transcripción. La grabación original, las diapositivas y los créditos se conservan en recursos-originales/video. El vídeo de presentación técnica de la PEC, con webcam, es una entrega distinta y sigue pendiente.
