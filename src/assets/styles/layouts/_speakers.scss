@@ -21,7 +21,7 @@ $column-gap: f.to-rem(32px);
       gap: f.to-rem(48px) $column-gap;
       margin: 0;
       padding: 0;
-      list-style: none;
+      list-style: disc;
     }
 
     &__item {
@@ -29,6 +29,11 @@ $column-gap: f.to-rem(32px);
       min-width: 0;
       container-type: inline-size;
       container-name: speaker;
+
+      // Oculta la viñeta sin eliminar el estilo nativo de lista.
+      &::marker {
+        color: transparent;
+      }
     }
 
     &__note {
