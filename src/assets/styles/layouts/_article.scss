@@ -96,6 +96,7 @@
     &__programme {
       margin-block: f.to-rem(32px);
       padding-block: f.to-rem(16px);
+      list-style-type: decimal;
       border-block: 1px solid v.$color-border;
       border-radius: 0;
     }
